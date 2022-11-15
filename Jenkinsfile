@@ -1,17 +1,15 @@
 pipeline {
-    agent { label 'npm-agent-logan' }
+    agent any 
+
+    tools { nodejs "node"}
+
     stages {
-        stage('Build') { 
+        stage('Startup') {
             steps {
-                sh 'printenv' 
-                sh 'pwd'
-                sh 'whoami'
-                echo '$PATH'
-                sh 'which npm'
-                sh 'ls -al'
-                sh 'nodejs -v'
-                sh 'npm -v'
-                sh 'npm install'    
+                script {
+                  bat 'cd gobarber-frontend'
+                  bat 'npm install'
+                }
             }
         }
     }
