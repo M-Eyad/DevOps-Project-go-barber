@@ -3,7 +3,7 @@ pipeline {
         stage('Startup') {
             steps {
                 script {
-                    sh 'npm install'
+                   echo 'Hala'
                 }
             }
         }
