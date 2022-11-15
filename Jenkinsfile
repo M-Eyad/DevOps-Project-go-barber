@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                   bat 'cd gobarber-frontend && npm start'
-                //   bat 'cd gobarber-backend && npm dev:server'
+                  bat 'cd gobarber-backend && npm dev:server'
                 }
             }
         }
