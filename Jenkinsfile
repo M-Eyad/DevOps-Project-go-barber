@@ -1,8 +1,8 @@
 pipeline {
-    agent {
-        image 'node-6-alpine'
-        args '-p 5555:5555'
-    }
+    agent any 
+
+    tools { nodejs "node"}
+    
     stages {
         stage('Startup') {
             steps {
