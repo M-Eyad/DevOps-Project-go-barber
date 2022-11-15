@@ -6,10 +6,15 @@ pipeline {
     stages {
         stage('Startup') {
             steps {
-                script {
-                  bat 'cd gobarber-frontend'
-                  bat 'npm -v'
-                }
+                sh 'printenv' 
+                sh 'pwd'
+                sh 'whoami'
+                echo '$PATH'
+                sh 'which npm'
+                sh 'ls -al'
+                sh 'nodejs -v'
+                sh 'npm -v'
+                sh 'npm install'    
             }
         }
     }
