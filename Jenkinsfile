@@ -8,6 +8,7 @@ pipeline {
             steps {
                 script {
                   bat 'cd gobarber-frontend'
+                  bat 'npm install'
                 }
             }
         }
