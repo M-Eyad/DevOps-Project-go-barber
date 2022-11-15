@@ -1,10 +1,7 @@
 pipeline {
-    agent any 
-
-    tools { nodejs "node"}
-
+    agent { label 'npm-agent-logan' }
     stages {
-        stage('Startup') {
+        stage('Build') { 
             steps {
                 sh 'printenv' 
                 sh 'pwd'
