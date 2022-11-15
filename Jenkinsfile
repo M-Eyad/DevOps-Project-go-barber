@@ -7,8 +7,7 @@ pipeline {
         stage('Startup') {
             steps {
                 script {
-                  bat 'cd gobarber-frontend'
-                  bat 'npm install'
+                  bat 'cd gobarber-frontend && npm install'
                 }
             }
         }
