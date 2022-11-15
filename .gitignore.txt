@@ -1,0 +1,8 @@
+node_modules
+package-lock.json
+
+gobarber-frontend/node-modules
+gobarber-frontend/package-lock.json
+
+gobarber-backend/node-modules
+gobarber-backend/package-lock.json
