@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Startup') {
             steps {
-              
-                echo 'Hala'
-                
+                script {
+                   echo 'Hala'
+                }
             }
         }
     }
