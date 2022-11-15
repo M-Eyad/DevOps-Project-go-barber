@@ -4,7 +4,7 @@ pipeline {
         stage('Startup') {
             steps {
                 script {
-                   sh 'npm install'
+                   sh 'cd gobarber-backend'
                 }
             }
         }
