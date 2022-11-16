@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                 //   bat 'cd gobarber-backend && npm test'
-                echo "$(<text.txt )"
+                echo "$(<test.txt )"
 
                 }
             }
