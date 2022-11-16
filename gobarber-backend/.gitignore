@@ -115,4 +115,4 @@ tmp/*
 
 yarn.lock
 
-ormconfig.json
+# ormconfig.json
