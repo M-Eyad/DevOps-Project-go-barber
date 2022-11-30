@@ -33,6 +33,7 @@ pipeline {
             steps {
                 script {
                   sh 'git pull origin master'
+                  sh 'pm2 restart all'
                 }
             }
         }
