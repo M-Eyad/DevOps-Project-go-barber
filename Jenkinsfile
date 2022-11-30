@@ -32,7 +32,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                  sh './Deploy'
+                  sh './deploy'
                 }
             }
         }
