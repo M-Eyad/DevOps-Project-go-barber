@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                   sh 'cd gobarber-frontend && npm install'
-                  sh 'cd gobarber-backend'
+                  sh 'cd gobarber-backend && npm install'
                 }
             }
         }
