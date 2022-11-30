@@ -7,16 +7,16 @@ pipeline {
         stage('Startup') {
             steps {
                 script {
-                  bat 'cd gobarber-frontend && npm install'
-                  bat 'cd gobarber-backend && npm install'
+                  sh 'cd gobarber-frontend && npm install'
+                  sh 'cd gobarber-backend && npm install'
                 }
             }
         }
          stage('Build') {
             steps {
                 script {
-                  bat 'cd gobarber-frontend'
-                  bat 'cd gobarber-backend'
+                  sh 'cd gobarber-frontend'
+                  sh 'cd gobarber-backend'
                 }
             }
         }
