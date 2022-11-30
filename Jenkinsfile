@@ -32,7 +32,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                  sh './deploy'
+                  sh 'git pull origin master'
                 }
             }
         }
