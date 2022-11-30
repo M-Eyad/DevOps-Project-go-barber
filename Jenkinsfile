@@ -32,8 +32,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                  sh 'git pull origin master'
-                  sh 'pm2 restart all'
+                  sh 'ssh userName@development-server-ip && cd /DevOps-Project-go-barber && git pull && pm2 restart all && exit'
                 }
             }
         }
