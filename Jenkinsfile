@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                   sh 'git pull origin master'
-                  sh 'pm2 restart all'
+                  sh 'cd DevOps-Project-go-barber pm2 restart all'
                 }
             }
         }
