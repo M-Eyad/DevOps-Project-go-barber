@@ -32,7 +32,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                  sh 'sudo pm2 restart all && exit'
+                  sh 'pm2 restart all && exit'
                 }
             }
         }
