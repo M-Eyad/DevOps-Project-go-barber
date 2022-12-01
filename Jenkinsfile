@@ -32,7 +32,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                  sh 'ssh root@161.35.195.149 && cd /DevOps-Project-go-barber && git pull && pm2 restart all && exit'
+                  sh 'ssh root@161.35.195.149 && cd /DevOps-Project-go-barber && git pull && sudo pm2 restart all && exit'
                 }
             }
         }
