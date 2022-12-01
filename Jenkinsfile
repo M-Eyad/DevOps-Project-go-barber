@@ -32,7 +32,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                  sh 'cd && cd /DevOps-Project-go-barber && git pull && sudo pm2 restart all && exit'
+                  sh 'sudo pm2 restart all && exit'
                 }
             }
         }
