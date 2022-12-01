@@ -32,7 +32,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                  sh 'pm2 restart all && exit'
+                  sh './deploy'
                 }
             }
         }
