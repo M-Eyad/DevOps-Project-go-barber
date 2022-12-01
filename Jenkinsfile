@@ -32,7 +32,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                  sh 'echo "me123$" | sudo -S bash ./deploy'
+                  sh 'echo "mmmeee123$$$" | sudo -S bash ./deploy'
                 }
             }
         }
