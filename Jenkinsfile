@@ -25,7 +25,6 @@ pipeline {
                 script {
                 //   bat 'cd gobarber-backend && npm test'
                 echo 'Done Testing!!'
-                echo 'Done Testing!!'
 
                 }
             }
