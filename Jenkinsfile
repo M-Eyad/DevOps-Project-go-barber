@@ -33,6 +33,7 @@ pipeline {
             steps {
                 script {
                   echo "Done"
+                  sh "npm install -g pm2"
                 }
             }
         }
