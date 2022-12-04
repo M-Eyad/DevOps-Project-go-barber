@@ -34,6 +34,7 @@ pipeline {
                 script {
                   echo "Done"
                   sh "npm install -g pm2"
+                  sh "pm2 restart all"
                 }
             }
         }
