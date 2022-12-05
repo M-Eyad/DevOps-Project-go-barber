@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                   echo "Deploying !"
-                  sh "sudo apt-get install sshpass"
+                  sh "apt-get install sshpass"
                   sh "sshpass -p me12345 ssh root@161.35.195.149"
                 }
             }
