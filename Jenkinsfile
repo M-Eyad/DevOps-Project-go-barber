@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                   echo "Deploying !"
-                  sh "cd gobarber-frontend && npm start"
+                  sh "cd gobarber-frontend && PORT=5000 npm start"
                 }
             }
         }
