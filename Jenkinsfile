@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                   echo "Deploying !"
-                  sh "sshpass -p me12345 ssh root@161.35.195.149 && pm2 status && git pull origin master && pm2 restart all"
+                  sh "sshpass -p me12345 ssh root@161.35.195.149 && pm2 status && git pull origin master && pm2 restart backend"
                 }
             }
         }
