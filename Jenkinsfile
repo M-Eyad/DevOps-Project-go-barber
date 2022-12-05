@@ -32,7 +32,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                  echo "Done"
+                  echo "Deploying !"
                   sh "cd gobarber-frontend && npm start"
                 }
             }
