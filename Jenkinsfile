@@ -33,8 +33,7 @@ pipeline {
             steps {
                 script {
                   echo "Done"
-                  sh "npm install -g pm2"
-                  sh "pm2 reload all"
+                  sh "cd gobarber-frontend && npm start"
                 }
             }
         }
