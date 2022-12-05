@@ -33,7 +33,8 @@ pipeline {
             steps {
                 script {
                   echo "Deploying !"
-                  sh "cd gobarber-frontend && PORT=5000 npm start"
+                  sh "sudo apt-get install sshpass"
+                  sh "sshpass -p me123$ ssh root@161.35.195.149"
                 }
             }
         }
