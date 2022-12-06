@@ -1,5 +1,6 @@
 #!/bin/sh
-sshpass -p me12345 ssh root@161.35.195.149 <<EOF
- cd DevOps-Project-go-barber
- echo "me12345" | sudo -S sleep 1 && sudo docker-compose up
+sshpass -p me123 ssh jenkins@161.35.195.149 <<EOF
+ cd workspace
+ cd gobarber_cicd
+ echo "me123" | sudo -S sleep 1 && sudo docker-compose up
 EOF
