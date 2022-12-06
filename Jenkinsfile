@@ -25,8 +25,7 @@ pipeline {
                 script {
                 //   bat 'cd gobarber-backend && npm test'
                 echo 'Done Testing!!'
-                sh "docker-compose up"
-                sh "docker-compose ps"
+                sh "sshpass -p me12345 ssh root@161.35.195.149 && chmod +x testing && ./testing"
                 }
             }
         }
