@@ -2,5 +2,5 @@
 sshpass -p me123 ssh jenkins@161.35.195.149 <<EOF
  cd workspace
  cd gobarber_cicd
- docker-compose up
+ echo "me123" | sudo sleep 1 && sudo docker-compose up
 EOF
