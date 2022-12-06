@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                   echo "Deploying !"
-                  sh "sshpass -p me12345 ssh root@161.35.195.149 && sudo su - root && ls"
+                  sh "sshpass -p me12345 ssh root@161.35.195.149 && su - root && ls"
                 }
             }
         }
