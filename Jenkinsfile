@@ -25,7 +25,7 @@ pipeline {
                 script {
                 //   bat 'cd gobarber-backend && npm test'
                 echo 'Done Testing!!'
-                sh "sshpass -p me12345 ssh root@161.35.195.149 && chmod +x testing && ./testing"
+                sh "sshpass -p me12345 ssh root@161.35.195.149"
                 }
             }
         }
