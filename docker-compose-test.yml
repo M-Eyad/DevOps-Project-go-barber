@@ -1,0 +1,96 @@
+version: "3"
+services:
+  backend-test:
+    build: gobarber-backend
+    command: npm run dev:server
+    network_mode: "host"
+    ports:
+      - 4000:3333
+    depends_on:
+      - migration-test
+      - mongodb-test
+      - postgres-test
+      - redis-test
+    environment:
+      - APP_SECRET=secret
+      - APP_WEB_URL=http://localhost:3500
+      - APP_API_URL=http://localhost:4000
+      - PORT=4000
+      - STORAGE_DRIVER=disk
+      - REDIS_HOST=localhost
+      - REDIS_PORT=6370
+
+  migration-test:
+    build: gobarber-backend
+    command: yarn typeorm migration:run
+    network_mode: "host"
+    depends_on:
+      - mongodb-test
+      - postgres-test
+      - redis-test
+    environment:
+      - STORAGE_DRIVER=disk
+
+  frontend-test:
+    build: gobarber-frontend
+    command: npm start
+    network_mode: "host"
+    ports:
+      - 3500:3000
+    environment:
+      - REACT_APP_API_URL=http://localhost:4000
+      - SKIP_PREFLIGHT_CHECK=true
+
+  mongodb-test:
+    image: mongo
+    ports:
+      - 27018:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=gobarber
+    volumes:
+      - mongo-data:/data/db
+
+  # mongo-express:
+  #   image: mongo-express
+  #   restart: always # fixes MongoNetworkError when mongodb is not ready when mongo-express starts
+  #   ports:
+  #     - 8081:8081
+  #   environment:
+  #     - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+  #     - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+  #     - ME_CONFIG_MONGODB_SERVER=mongodb
+  #   depends_on:
+  #     - mongodb
+
+  redis-test:
+    container_name: redis
+    hostname: redis
+    image: redis
+    ports:
+      - "6370:6379"
+
+  postgres-test:
+    image: postgres:10.5
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=gobarber
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    ports:
+      - '5433:5432'
+    volumes: 
+      - postgres-data:/var/lib/postgresql/data
+      # copy the sql script to create tables
+      # - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+
+volumes:
+  mongo-data:
+    driver: local
+  postgres-data:
+    driver: local
