@@ -1,5 +1,4 @@
 #!/bin/sh
-sshpass -p me12345 ssh root@161.35.195.149 <<EOF
- cd DevOps-Project-go-barber
+sshpass -p me123 ssh jenkins@161.35.195.149 <<EOF
  ls
 EOF
