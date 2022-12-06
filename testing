@@ -1,6 +1,5 @@
 #!/bin/sh
 sshpass -p me12345 ssh root@161.35.195.149 <<EOF
  cd DevOps-Project-go-barber
- cd gobarber-backend
- npm test
+ docker-compose up
 EOF
