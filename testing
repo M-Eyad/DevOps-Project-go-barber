@@ -1,6 +1,6 @@
 #!/bin/sh
 sshpass -p me123 ssh jenkins@161.35.195.149 <<EOF
  cd workspace
- cd gobarber-cicd
+ cd gobarber_cicd
  ls
 EOF
