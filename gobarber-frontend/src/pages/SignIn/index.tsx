@@ -69,7 +69,7 @@ const SignIn: React.FC = () => {
         <AnimationContainer>
           <LogoImage src={logoImg} alt="GoBarber" />
           <Form ref={formRef} onSubmit={handleSubmit}>
-            <h1>Faça seu logon</h1>
+            <h1>Faça seu logon!</h1>
 
             <Input name="email" icon={FiMail} placeholder="E-mail" type="email" autoComplete="email" />
             <Input name="password" icon={FiLock} placeholder="Senha" type="password" autoComplete="current-password" />
