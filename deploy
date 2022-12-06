@@ -2,6 +2,5 @@
 sshpass -p me12345 ssh root@161.35.195.149 <<EOF
  cd DevOps-Project-go-barber
  git pull 
- npm i pm2
  pm2 status
 EOF
