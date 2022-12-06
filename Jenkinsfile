@@ -25,7 +25,8 @@ pipeline {
                 script {
                 //   bat 'cd gobarber-backend && npm test'
                 echo 'Done Testing!!'
-                sh "docker compose up -d"
+                sh "docker compose -d --wait"
+                sh "docker compose ps"
                 }
             }
         }
