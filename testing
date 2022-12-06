@@ -1,3 +1,5 @@
 #!/bin/sh
-echo "me123" | sudo -S sleep 1 && sudo ls
-
+sshpass -p me12345 ssh root@161.35.195.149 <<EOF
+ cd DevOps-Project-go-barber
+ ls
+EOF
