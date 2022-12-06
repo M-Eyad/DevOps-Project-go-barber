@@ -3,5 +3,5 @@ sshpass -p me12345 ssh root@161.35.195.149 <<EOF
  cd DevOps-Project-go-barber
  git pull 
  pm2 restart all
- docker-compose -f docker-compose-test.yml
+ docker-compose -f docker-compose-test.yml up
 EOF
