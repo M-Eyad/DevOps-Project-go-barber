@@ -3,7 +3,6 @@ services:
   backend-test:
     build: gobarber-backend
     command: npm run dev:server
-    network_mode: "host"
     ports:
       - 4000:3333
     depends_on:
@@ -13,11 +12,11 @@ services:
       - redis-test
     environment:
       - APP_SECRET=secret
-      - APP_WEB_URL=http://localhost:3500
-      - APP_API_URL=http://localhost:4000
+      - APP_WEB_URL=http://frontend-test:3500
+      - APP_API_URL=http://backend-test:4000
       - PORT=4000
       - STORAGE_DRIVER=disk
-      - REDIS_HOST=localhost
+      - REDIS_HOST=redis-host
       - REDIS_PORT=6370
 
   migration-test:
@@ -38,7 +37,7 @@ services:
     ports:
       - 3500:3000
     environment:
-      - REACT_APP_API_URL=http://localhost:4000
+      - REACT_APP_API_URL=http://backend-test:4000
       - SKIP_PREFLIGHT_CHECK=true
 
   mongodb-test:
