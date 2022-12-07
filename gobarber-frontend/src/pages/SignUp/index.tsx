@@ -70,9 +70,9 @@ const SignUp: React.FC = () => {
           <img src={logoImg} alt="GoBarber" />
           <Form ref={formRef} onSubmit={handleSubmit}>
             <h1>قم بالتسجيل</h1>
-            <Input name="name" icon={FiUser} placeholder="Nome" type="text" autoComplete="name" />
-            <Input name="email" icon={FiMail} placeholder="E-mail" type="email" autoComplete="email" />
-            <Input name="password" icon={FiLock} placeholder="Senha" type="password" autoComplete="current-password" />
+            <Input name="name" icon={FiUser} placeholder="الاسم" type="text" autoComplete="name" />
+            <Input name="email" icon={FiMail} placeholder="البريد الإلكتروني" type="email" autoComplete="email" />
+            <Input name="password" icon={FiLock} placeholder="كلمة المرور" type="password" autoComplete="current-password" />
             <Button type="submit">تسجيل</Button>
           </Form>
           <Link to="/">
