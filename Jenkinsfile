@@ -40,8 +40,8 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                  echo '>>>>> Deploying the project. Deploying the project on digitalocean"
-                  sh "sshpass -p me12345 ssh root@161.35.195.149 && pm2 status && chmod +x deploy && ./deploy"
+                  echo '>>>>> Deploying the project. Deploying the project on digitalocean'
+                  sh 'sshpass -p me12345 ssh root@161.35.195.149 && pm2 status && chmod +x deploy && ./deploy'
                   echo 'Done Deploying stage >>>>>'
                 }
             }
