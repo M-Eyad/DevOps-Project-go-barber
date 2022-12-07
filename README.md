@@ -18,17 +18,13 @@
   
 <br/>
 
-<p>Made with ❤️ by Alvaro Israel 👏🏻 <a href="https://www.linkedin.com/in/alvaroisraeldesenvolvedor/">Get in Touch!</a></p>
-<p>Hit the ⭐️ button if you like this project!</p>
+<p> This project is brought from Alvaro Israel 👏🏻 <a href="https://www.linkedin.com/in/alvaroisraeldesenvolvedor/">Get in Touch!</a></p>
+<p> This is a project that is used to implement DevOps course concepts </p>
 
 </div>
 
 
 <br/>
-
-## Preview
-
-![Go Barber App](/gobarber-frontend/src/assets/gobarber-tutorial.gif)
 
 ## 🏆 Technologies Used In This Project
 
