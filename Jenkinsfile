@@ -15,8 +15,8 @@ pipeline {
          stage('Build') {
             steps {
                 script {
-                  sh 'cd gobarber-frontend'
-                  sh 'cd gobarber-backend'
+                  sh 'cd gobarber-frontend && npm start'
+                  sh 'cd gobarber-backend && npm run dev:server'
                 }
             }
         }
