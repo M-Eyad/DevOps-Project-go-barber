@@ -40,7 +40,7 @@ pipeline {
     }
     post {
         always {
-             sh "sshpass -p me12345 ssh root@161.35.195.149 && chmod +x testing && ./container"
+             sh "sshpass -p me12345 ssh root@161.35.195.149 && chmod +x container && ./container"
         }
     }
 }
