@@ -76,15 +76,15 @@ const ForgotPassword: React.FC = () => {
         <AnimationContainer>
           <img src={logoImg} alt="GoBarber" />
           <Form ref={formRef} onSubmit={handleSubmit}>
-            <h1>Recuperar senha</h1>
-            <Input name="email" icon={FiMail} placeholder="E-mail" />
+            <h1>إستعادة كلمة المرور</h1>
+            <Input name="email" icon={FiMail} placeholder="البريد الإلكتروني" />
             <Button loading={loading} type="submit">
-              Recuperar
+            استرد
             </Button>
           </Form>
           <Link to="/signin">
             <FiLogIn />
-            Voltar ao login
+            العودة لتسجيل الدخول
           </Link>
         </AnimationContainer>
       </Content>
