@@ -9,12 +9,10 @@
   
 [![CodeQLCI](https://github.com/AlvaroIsrael/gobarber-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AlvaroIsrael/gobarber-app/actions/workflows/codeql-analysis.yml)
 
-> A concept (yet fully-functional) barber shop app!
+> This is a barber shop project for DevOps Course project.
 
 <p>
   <a href="#-technologies-used">Technologies Used</a> •
-  <a href="#-how-to-use">How To Use</a> •
-  <a href="#-contributing">Contributing</a> •
   <a href="#-license">License</a>
 </p>
   
@@ -25,3 +23,26 @@
 
 </div>
 
+
+<br/>
+
+## Preview
+
+![Go Barber App](/gobarber-frontend/src/assets/gobarber-tutorial.gif)
+
+## 🏆 Technologies Used In This Project
+
+- [Node.js](https://nodejs.org/en/) and [NPM](http://npmjs.com)
+- [React](https://github.com/facebook/react/)
+- [ReactNative](https://github.com/facebook/react-native/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/)
+- [Jest](https://jestjs.io/)
+
+
+
+
+
+## 📝 License
+
+This software is under MIT license. See [LICENSE](LICENSE.md) for more details.
