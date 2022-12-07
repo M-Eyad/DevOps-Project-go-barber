@@ -2,7 +2,9 @@ version: "3"
 services:
   backend-test:
     build: gobarber-backend
-    command: npm run dev:server
+    command: 
+    - npm run dev:server 
+    - npm test
     ports:
       - 4000:3333
     depends_on:
