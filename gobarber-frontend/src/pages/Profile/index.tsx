@@ -144,7 +144,7 @@ const Profile: React.FC = () => {
             </label>
           </AvatarInput>
 
-          <h1>Meu perfil</h1>
+          <h1>ملفي</h1>
 
           <Input name="name" icon={FiUser} placeholder="Nome" />
           <Input name="email" icon={FiMail} placeholder="E-mail" />
@@ -154,21 +154,21 @@ const Profile: React.FC = () => {
             name="old_password"
             icon={FiLock}
             type="password"
-            placeholder="Senha atual"
+            placeholder="كلمة المرور القديمة"
             autoComplete="current-password"
           />
 
-          <Input name="password" icon={FiLock} type="password" placeholder="Nova senha" autoComplete="new-password" />
+          <Input name="password" icon={FiLock} type="password" placeholder="كلمة المرور الجديدة" autoComplete="new-password" />
 
           <Input
             name="password_confirmation"
             icon={FiLock}
             type="password"
-            placeholder="Confirmar senha"
+            placeholder="تأكيد كلمة المرور"
             autoComplete="new-password"
           />
 
-          <Button type="submit">Confirmar alterações</Button>
+          <Button type="submit">تأكيد التغييرات</Button>
         </Form>
       </Content>
     </Container>
