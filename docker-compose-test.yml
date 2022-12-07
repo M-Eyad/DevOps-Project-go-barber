@@ -22,7 +22,7 @@ services:
   migration-test:
     build: gobarber-backend
     command: yarn typeorm migration:run
-    network_mode: "host"
+    network_mode: "bridge"
     depends_on:
       - mongodb-test
       - postgres-test
@@ -33,7 +33,7 @@ services:
   frontend-test:
     build: gobarber-frontend
     command: npm start
-    network_mode: "host"
+    network_mode: "bridge"
     ports:
       - 3500:3000
     environment:
