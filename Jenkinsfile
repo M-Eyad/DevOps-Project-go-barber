@@ -23,7 +23,6 @@ pipeline {
                   echo 'Starting the project'
                   sh 'cd gobarber-frontend && npm start'
                   echo 'Done building stage >>>>> Project is running with no issues'
-                  sh 'cd gobarber-backend && npm run dev:server'
                 }
             }
         }
