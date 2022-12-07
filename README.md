@@ -9,7 +9,7 @@
   
 [![CodeQLCI](https://github.com/AlvaroIsrael/gobarber-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AlvaroIsrael/gobarber-app/actions/workflows/codeql-analysis.yml)
 
-> This is a barber shop project for DevOps Course project.
+> This is a barber shop project selected for DevOps Course project.
 
 <p>
   <a href="#-technologies-used">Technologies Used</a> •
@@ -19,7 +19,7 @@
 <br/>
 
 <p> This project is brought from Alvaro Israel 👏🏻 <a href="https://www.linkedin.com/in/alvaroisraeldesenvolvedor/">Get in Touch!</a></p>
-<p> This is a project that is used to implement DevOps course concepts </p>
+<p> This project is used to implement DevOps course concepts </p>
 
 </div>
 
