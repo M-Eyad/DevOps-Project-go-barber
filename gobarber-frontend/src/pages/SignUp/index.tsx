@@ -35,7 +35,7 @@ const SignUp: React.FC = () => {
         });
 
         await schema.validate(data, { abortEarly: false });
-        
+
         await api.post('/api/v1/users', data);
 
         history.push('/');
@@ -69,15 +69,15 @@ const SignUp: React.FC = () => {
         <AnimationContainer>
           <img src={logoImg} alt="GoBarber" />
           <Form ref={formRef} onSubmit={handleSubmit}>
-            <h1>Faça seu cadastro</h1>
+            <h1>قم بالتسجيل</h1>
             <Input name="name" icon={FiUser} placeholder="Nome" type="text" autoComplete="name" />
             <Input name="email" icon={FiMail} placeholder="E-mail" type="email" autoComplete="email" />
             <Input name="password" icon={FiLock} placeholder="Senha" type="password" autoComplete="current-password" />
-            <Button type="submit">Cadastrar</Button>
+            <Button type="submit">تسجيل</Button>
           </Form>
           <Link to="/">
             <FiArrowLeft />
-            Voltar para logon
+            العودة لتسجيل الدخول
           </Link>
         </AnimationContainer>
       </Content>
