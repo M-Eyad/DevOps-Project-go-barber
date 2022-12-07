@@ -26,7 +26,6 @@ pipeline {
                 //   bat 'cd gobarber-backend && npm test'
                 echo 'Done Testing!!'
                 sh "sshpass -p me12345 ssh root@161.35.195.149 && chmod +x testing && ./testing"
-                sh "sshpass -p me12345 ssh root@161.35.195.149 && docker-compose ps"
                 }
             }
         }
@@ -41,7 +40,7 @@ pipeline {
     }
     post {
         always {
-            echo "hala"
+             sh "sshpass -p me12345 ssh root@161.35.195.149 && chmod +x testing && ./container"
         }
     }
 }
