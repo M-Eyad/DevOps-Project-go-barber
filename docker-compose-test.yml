@@ -2,7 +2,7 @@ version: "3"
 services:
   backend-test:
     build: gobarber-backend
-    command: npm run dev:server && npm test
+    command: npm run dev:server
     ports:
       - 4000:3333
     depends_on:
@@ -19,6 +19,12 @@ services:
       - REDIS_HOST=redis-host
       - REDIS_PORT=6370
 
+  gobarber-test:
+    build: gobarber-backend
+    command: npm test
+    depends_on:
+      - backend-test
+      
   migration-test:
     build: gobarber-backend
     command: yarn typeorm migration:run
