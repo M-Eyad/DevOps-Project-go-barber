@@ -147,7 +147,7 @@ const Dashboard: FC = () => {
           <Profile>
             <img src={user.avatar_url} alt={user.name} />
             <div>
-              <span>Bem vindo</span>
+              <span>أهلا وسهلا</span>
               <Link to="/profile">
                 <strong>{user.name}</strong>
               </Link>
@@ -161,7 +161,7 @@ const Dashboard: FC = () => {
 
         <Content>
           <Schedule>
-            <h1>Horários agendados</h1>
+            <h1>الأوقات المجدولة</h1>
             <p>
               {isToday(selectedDate) && <span>Hoje</span>}
               <span>{selectedDateAsText}</span>
@@ -170,7 +170,7 @@ const Dashboard: FC = () => {
 
             {nextAppointment && (
               <NextAppointment>
-                <strong>Agendamento a seguir</strong>
+                <strong>الجدول الزمني للمتابعة</strong>
                 <div>
                   <img src={nextAppointment.user.avatar_url} alt={nextAppointment.user.name} />
 
@@ -184,8 +184,8 @@ const Dashboard: FC = () => {
             )}
 
             <Section>
-              <strong>Manhã</strong>
-              {morningAppointments.length === 0 && <p>Nenhum agendamento neste período ainda.</p>}
+              <strong>صباح</strong>
+              {morningAppointments.length === 0 && <p>لا حجوزات لهذه الفترة حتى الان</p>}
 
               {morningAppointments.map(appointment => (
                 <Appointment key={appointment.id}>
@@ -203,8 +203,8 @@ const Dashboard: FC = () => {
             </Section>
 
             <Section>
-              <strong>Tarde</strong>
-              {afternoonAppointments.length === 0 && <p>Nenhum agendamento neste período ainda.</p>}
+              <strong>مساء</strong>
+              {afternoonAppointments.length === 0 && <p>لا حجوزات لهذه الفترة حتى الان</p>}
 
               {afternoonAppointments.map(appointment => (
                 <Appointment key={appointment.id}>
@@ -225,7 +225,7 @@ const Dashboard: FC = () => {
 
           <Calendar>
             <DayPicker
-              weekdaysShort={['D', 'S', 'T', 'Q', 'Q', 'S', 'S']}
+              weekdaysShort={['S', 'M', 'T', 'W', 'T', 'F', 'S']}
               fromMonth={new Date()}
               disabledDays={[{ daysOfWeek: [0, 6] }, ...disabledDays]}
               modifiers={{
@@ -235,18 +235,18 @@ const Dashboard: FC = () => {
               selectedDays={selectedDate}
               onDayClick={handleDateChange}
               months={[
-                'Janeiro',
-                'Fevereiro',
-                'Março',
-                'Abril',
-                'Maio',
-                'Junho',
-                'Julho',
-                'Agosto',
-                'Setembro',
-                'Outubro',
-                'Novembro',
-                'Dezembro',
+                'يناير',
+                'فبراير',
+                'مارس',
+                'أبريل',
+                'مايو',
+                'يونيو',
+                'يوليو',
+                'أغسطس',
+                'سبتمبر',
+                'أكتوبر',
+                'نوفمبر',
+                'ديسمبر',
               ]}
             />
           </Calendar>
