@@ -39,7 +39,7 @@ const SignIn: React.FC = () => {
         });
 
         await schema.validate(data, { abortEarly: false });
-      
+
         await signIn({
           email: data.email,
           password: data.password,
@@ -69,18 +69,18 @@ const SignIn: React.FC = () => {
         <AnimationContainer>
           <LogoImage src={logoImg} alt="GoBarber" />
           <Form ref={formRef} onSubmit={handleSubmit}>
-            <h1>Faça seu logon!</h1>
+            <h1>تسجيل الدخول</h1>
 
-            <Input name="email" icon={FiMail} placeholder="E-mail" type="email" autoComplete="email" />
-            <Input name="password" icon={FiLock} placeholder="Senha" type="password" autoComplete="current-password" />
-            <Button type="submit">Entrar</Button>
+            <Input name="email" icon={FiMail} placeholder="البريد الالكتروني" type="email" autoComplete="email" />
+            <Input name="password" icon={FiLock} placeholder="كلمة المرور" type="password" autoComplete="current-password" />
+            <Button type="submit">تسجيل الدخول</Button>
 
-            <Link to="forgot-password">Esqueci minha senha</Link>
+            <Link to="forgot-password">لقد نسيت كلمة المرور</Link>
           </Form>
 
           <Link to="/signup">
             <FiLogIn />
-            Criar conta
+            انشئ حساب
           </Link>
         </AnimationContainer>
         <Copyright>
