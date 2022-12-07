@@ -86,13 +86,13 @@ const ResetPassword: React.FC = () => {
           <img src={logoImg} alt="GoBarber" />
 
           <Form ref={formRef} onSubmit={handleSubmit}>
-            <h1>Resetar senha</h1>
+            <h1>إعادة تعيين كلمة المرور</h1>
 
-            <Input name="password" icon={FiLock} type="password" placeholder="Nova senha" />
+            <Input name="password" icon={FiLock} type="password" placeholder="كلمة المرور" />
 
-            <Input name="passwordConfirmation" icon={FiLock} type="password" placeholder="Confirmação da senha" />
+            <Input name="passwordConfirmation" icon={FiLock} type="password" placeholder="تأكيد كلمة المرور" />
 
-            <Button type="submit">Alterar senha</Button>
+            <Button type="submit">غير كلمة السر</Button>
           </Form>
         </AnimationContainer>
       </Content>
