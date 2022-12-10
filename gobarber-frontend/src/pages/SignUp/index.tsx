@@ -77,7 +77,7 @@ const SignUp: React.FC = () => {
           </Form>
           <Link to="/">
             <FiArrowLeft />
-            العودة لتسجيل الدخول
+            العودة إلى تسجيل الدخول
           </Link>
         </AnimationContainer>
       </Content>
