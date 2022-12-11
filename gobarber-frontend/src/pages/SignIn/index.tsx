@@ -73,7 +73,7 @@ const SignIn: React.FC = () => {
 
             <Input name="email" icon={FiMail} placeholder="البريد الالكتروني" type="email" autoComplete="email" />
             <Input name="password" icon={FiLock} placeholder="كلمة المرور" type="password" autoComplete="current-password" />
-            <Button type="submit">صفحة تسجيل الدخول</Button>
+            <Button type="submit"> تسجيل الدخول</Button>
 
             <Link to="forgot-password">لقد نسيت كلمة المرور</Link>
           </Form>
