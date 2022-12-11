@@ -1,9 +1,9 @@
 #!/bin/sh
 sshpass -p me12345 ssh root@161.35.195.149 <<EOF
  cd DevOps-Project-go-barber
- git pull 
- pm2 restart all
- ls
  docker system prune -a --volumes -f
  docker-compose -f docker-compose.yml up -d
+ cd gobarber-backend 
+ ls
+ npm test
 EOF
